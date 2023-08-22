@@ -10,7 +10,6 @@ TaskInfoTuple = namedtuple(
     "TaskInfoTuple", "scene_name language objects_of_interest goal_states"
 )
 
-
 def register_task_info(language, scene_name, objects_of_interest=[], goal_states=[]):
 
     if scene_name not in TASK_INFO:
@@ -28,6 +27,10 @@ def register_task_info(language, scene_name, objects_of_interest=[], goal_states
         TaskInfoTuple(scene_name, language, objects_of_interest, task_goal)
     )
 
+def clear_task_info():
+    """This is to clear the task info for each run of the task generation. This function is useful if a user is trying to debug task generation in a jupyter notebook, where the process won't be restarted every time.
+    """
+    TASK_INFO.clear()
 
 def get_task_info(scene_name=None):
     if scene_name is None:

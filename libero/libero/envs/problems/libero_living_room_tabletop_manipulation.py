@@ -14,7 +14,7 @@ class Libero_Living_Room_Tabletop_Manipulation(BDDLBaseDomain):
         self.workspace_name = "living_room_table"
         self.visualization_sites_list = []
         if "living_room_table_full_size" in kwargs:
-            self.living_room_table_full_size = living_room_table_full_size
+            self.living_room_table_full_size = kwargs["livinging_room_table_full_size"]
         else:
             self.living_room_table_full_size = (0.70, 1.6, 0.024)
         self.living_room_table_offset = (0, 0, 0.41)

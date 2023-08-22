@@ -105,6 +105,7 @@ class InitialSceneTemplates:
         target_name=None,
         region_half_len=0.02,
         yaw_rotation=(0.0, 0.0),
+        z_offset=0.01,
     ):
         """This is a function that creates a default region with rectangular shape."""
         if target_name is None:
@@ -121,6 +122,7 @@ class InitialSceneTemplates:
                     )
                 ],
                 "yaw_rotation": [yaw_rotation],
+                "z_offset":[z_offset],
             }
         }
         print

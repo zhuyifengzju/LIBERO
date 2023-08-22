@@ -34,7 +34,7 @@ def update_region_samplers(
     if problem_name not in REGION_SAMPLERS:
         REGION_SAMPLERS[problem_name] = {}
     REGION_SAMPLERS[problem_name][region_sampler_name] = eval(
-        f"{problem_name}.{region_sampler_class_name}"
+        f"{region_sampler_class_name}"
     )
 
 
