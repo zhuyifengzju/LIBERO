@@ -39,6 +39,9 @@ def get_regions(t, regions, group):
                     len(attribute[1]) == 4
                 ), f"Missing specification for rgba color, supposed to be 4 dimension, but only got  {attribute[1]}"
                 region_dict["rgba"] = [float(x) for x in attribute[1]]
+            elif attribute[0] == ":z_offset":
+                assert len(attribute) == 2
+                region_dict["z_offset"] = float(attribute[1][0])
             else:
                 raise NotImplementedError
         regions[target_name + "_" + region_name] = region_dict
